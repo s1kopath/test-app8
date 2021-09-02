@@ -39,7 +39,7 @@ class EmployeeController extends Controller
             'picture' => $file_name,
             'created_by' => auth()->user()->id,
         ]);
-        return redirect()->back()->with('success', 'Employee added successfully');
+        return redirect()->back()->with('success',  __('Employee added successfully'));
     }
     public function delete($id)
     {
@@ -50,7 +50,7 @@ class EmployeeController extends Controller
         if (FileExists($image_path)) {
             unlink($image_path);
         }
-        return redirect()->back()->with('success', 'Employee deleted successfully');
+        return redirect()->back()->with('success', __('Employee deleted successfully'));
     }
 
     public function update(Request $request)
@@ -81,6 +81,6 @@ class EmployeeController extends Controller
             'picture' => $file_name,
         ]);
 
-        return redirect()->back()->with('success', 'Updated Successfully');
+        return redirect()->back()->with('success', __('Updated Successfully'));
     }
 }

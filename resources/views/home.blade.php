@@ -75,18 +75,18 @@
                 @endif
 
                 
-                <h2>Employee List</h2>
+                <h2>{{ __('Employee List') }}</h2>
                 <div class="container">
                     <table class="table table-striped table-sm" id="myTable">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                                <th>Date of birth</th>
-                                <th>Picture</th>
-                                <th>Action</th>
+                                <th>{{ __('Name') }}</th>
+                                <th>{{ __('Contact') }}</th>
+                                <th>{{ __('Email') }}</th>
+                                <th>{{ __('Date of birth') }}</th>
+                                <th>{{ __('Picture') }}</th>
+                                <th>{{ __('Action') }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -115,7 +115,7 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Update Employee</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">{{ __('Update Employee') }}</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -127,27 +127,27 @@
                                                 <input type="hidden" name="id" value="{{ $data->id }}">
                                                 <div class="modal-body">
                                                     <div class="form-group">
-                                                        <label>Name</label>
+                                                        <label>{{ __('Name') }}</label>
                                                         <input type="text" class="form-control" name="name"
                                                             value="{{ $data->name }}">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Contact</label>
+                                                        <label>{{ __('Contact') }}</label>
                                                         <input type="number" class="form-control" name="contact"
                                                             value="{{ $data->contact }}">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Email address</label>
+                                                        <label>{{ __('Email address') }}</label>
                                                         <input type="email" class="form-control" name="email"
                                                             value="{{ $data->email }}">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Date of birth</label>
+                                                        <label>{{ __('Date of birth') }}</label>
                                                         <input type="date" class="form-control" name="date_of_birth"
                                                             value="{{ $data->date_of_birth }}">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Picture: </label>
+                                                        <label>{{ __('Picture') }} :</label>
                                                         <img style="width: 100px; border-radius: 50%"
                                                             src="{{ asset('storage/employees/' . $data->picture) }}"
                                                             alt="">
@@ -156,8 +156,8 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                                        data-dismiss="modal">{{ __('Close') }}</button>
+                                                    <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -180,7 +180,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add New Employee</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{ __('Add New Employee') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -189,29 +189,29 @@
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>{{ __('Name') }}</label>
                             <input type="text" class="form-control" name="name">
                         </div>
                         <div class="form-group">
-                            <label>Contact</label>
+                            <label>{{ __('Contact') }}</label>
                             <input type="number" class="form-control" name="contact">
                         </div>
                         <div class="form-group">
-                            <label>Email address</label>
+                            <label>{{ __('Email address') }}</label>
                             <input type="email" class="form-control" name="email">
                         </div>
                         <div class="form-group">
-                            <label>Date of birth</label>
+                            <label>{{ __('Date of birth') }}</label>
                             <input type="date" class="form-control" name="date_of_birth">
                         </div>
                         <div class="form-group">
-                            <label>Picture: </label>
+                            <label>{{ __('Picture') }} :</label>
                             <input type="file" name="picture">
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('Close') }}</button>
+                        <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
                     </div>
                 </form>
             </div>

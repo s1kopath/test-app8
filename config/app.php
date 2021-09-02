@@ -233,8 +233,6 @@ return [
     'languages' => [
         'en' => 'English',
         'bn' => 'বাংলা',
-        'lt' => 'Lithuanian',
-        'hi' => 'Hindi'
     ],
 
 ];
